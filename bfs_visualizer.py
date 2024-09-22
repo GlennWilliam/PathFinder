@@ -116,10 +116,14 @@ def main():
                 draw_grid(path, visited)
                 pygame.display.flip()
                 break  # Stop the loop once the path is found
+            else:
+                draw_grid(visited=visited)
+                pygame.display.flip()
+                break
         else:
             draw_grid(visited=visited)
         pygame.display.flip()
-        clock.tick(90) # Limit the frame rate to 60 FPS
+        clock.tick(60) # Limit the frame rate to 60 FPS
 
     # Keep the window open after finding the path
     while True:
@@ -127,7 +131,6 @@ def main():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
-        clock.tick(60)
 
 if __name__ == "__main__":
     main()
