@@ -49,9 +49,9 @@ def draw_grid(path=[], visited=set()):
             elif (x, y) == start_point:
                 pygame.draw.rect(screen, YELLOW, rect)  # Fill the start point tile
             elif (x, y) == end_point:
-                pygame.draw.rect(screen, GREEN, rect)  # Fill the end point tile
+                pygame.draw.rect(screen, BLUE, rect)  # Fill the end point tile
             elif (x, y) in path:
-                pygame.draw.rect(screen, BLUE, rect)  # Fill the path tile
+                pygame.draw.rect(screen, GREEN, rect)  # Fill the path tile
             elif (x, y) in visited:
                 pygame.draw.rect(screen, GRAY, rect)  # Fill the visited nodes
             else:
